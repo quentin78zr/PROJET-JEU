@@ -1,5 +1,5 @@
 body{
-    background-image:url("../img/Stade169.jpg");
+    background-image:url("../img/terrain-de-foot-1.png");
     background-size:100%;
     background-repeat: no-repeat;
 
@@ -27,6 +27,62 @@ h1{
 button{
     /* border-radius: 100%; */
 }
+
+#logo{
+    width:50px;
+}
+
+.joueur {
+    width:200px;
+    height:200px;
+}
+
+.computer{
+	width: 200px;
+	height: 200px;
+}
+
+#logo-psg, #logo-marseille{
+    width:100%;
+    height:100%;
+}
+
+.jeu{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.score{
+	width: 200px;
+	height: 260px;
+	text-align: center;
+}
+
+.score p{
+	font-size: 50px;
+}
+
+.ballon{
+	display: flex;
+	justify-content: center;
+}
+
+.six-buttons{
+	display:flex;
+	align-items: center;
+	justify-content: space-evenly;
+	margin-top: 15vh;
+}
+
+.three-buttons{
+	display:flex;
+	flex-direction: column;
+}
+
+
+
+
 
 /* Button fullscreen*/
 
@@ -86,3 +142,4 @@ button{
 .toggle-fullscreen-btn.on .icon-fullscreen-enter {
 	display: none;
 }
+
