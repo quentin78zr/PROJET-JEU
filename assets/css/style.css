@@ -32,7 +32,7 @@ button{
     width:50px;
 }
 
-.joueur {
+.player {
     width:200px;
     height:200px;
 }
@@ -47,7 +47,7 @@ button{
     height:100%;
 }
 
-.jeu{
+.game{
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -63,7 +63,7 @@ button{
 	font-size: 50px;
 }
 
-.ballon{
+.ball{
 	display: flex;
 	justify-content: center;
 }
