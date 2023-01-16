@@ -1,18 +1,18 @@
-const startPlay = document.querySelectorAll("button");
-// const result = document.querySelector(".resultat");
+const buttons = document.querySelectorAll("button");
+// const resultat = document.querySelector(".resultat");
 
-for (let i = 0; i < startPlay.length; i++) {
-  startPlay[i].addEventListener('click', function() {
-    const player = startPlay[i].innerHTML;
-    const IA = startPlay[Math.floor(Math.random() * startPlay.length)].innerHTML;
-    let result = "";
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener('click', function() {
+    const joueur = buttons[i].innerHTML;
+    const robot = buttons[Math.floor(Math.random() * buttons.length)].innerHTML;
+    let resultat = "";
     let round = 10;
-    // result.innerHTML = player + "       " + IA;
+    // resultat.innerHTML = joueur + "       " + robot;
     while (round < 10) {
-      if (player===IA) {
+      if (joueur===robot) {
         resultat = "Egalité";
       }
-      else if ((player === "Pierre" && IA === "Ciseaux") || (player === "Ciseaux" && IA === "Feuilles") || (player === "Feuilles") && (IA === "Pierre")) {
+      else if ((joueur === "Pierre" && robot === "Ciseaux") || (joueur === "Ciseaux" && robot === "Feuilles") || (joueur === "Feuilles") && (robot === "Pierre")) {
         resultat = "Gagné";
       }
       else {
@@ -20,9 +20,9 @@ for (let i = 0; i < startPlay.length; i++) {
       }
     }
   document.querySelector(".resultat").innerHTML = `
-  Joueur : ${player} </br>
-  Robot : ${IA} <br/>
-  Résultat : ${result}
+  Joueur : ${joueur} </br>
+  Robot : ${robot} <br/>
+  Résultat : ${resultat}
 `  ;
     
   });
