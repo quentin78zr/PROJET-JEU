@@ -32,15 +32,11 @@ button{
     width:50px;
 }
 
-.player {
-    width:200px;
-    height:200px;
+.player, .computer {
+    width:150px;
+    height:150px;
 }
 
-.computer{
-	width: 200px;
-	height: 200px;
-}
 
 #logo-psg, #logo-marseille{
     width:100%;
@@ -81,8 +77,8 @@ button{
 }
 
 .three-buttons button{
-	width: 250px;
-	height: 70px;
+	width: 200px;
+	height: 60px;
 	border-radius: 10px;
 	border-color: white;
 	background-color: transparent;
