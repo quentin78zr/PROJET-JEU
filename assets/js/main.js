@@ -25,22 +25,23 @@ for (let i = 0; i < buttons.length; i++) {
   Résultat : ${resultat}
 `  ;
     
+    // SAUVEGARDE 
     if(typeof localStorage!='undefined') {
   // Récupération de la valeur dans web storage
-  var nbvisites = localStorage.getItem('visites');
+  var nbVisit = localStorage.getItem('visites');
   // Vérification de la présence du compteur
-  if(nbvisites!=null) {
+  if(nbVisit!=null) {
     // Si oui, on convertit en nombre entier la chaîne de texte qui fut stockée
-    nbvisites = parseInt(nbvisites);
+    nbVisit = parseInt(nbvisites);
   } else {
-    nbvisites = 1;
+    nbVisit = 1;
   }
   // Incrémentation
-  nbvisites++;
+  nbVisit++;
   // Stockage à nouveau en attendant la prochaine visite...
-  localStorage.setItem('visites',nbvisites);
+  localStorage.setItem('visites',nbVisit);
   // Affichage dans la page
-  document.getElementById('visites').innerHTML = nbvisites;
+  document.getElementById('visites').innerHTML = nbVisit;
 } else {
   alert("localStorage n'est pas supporté");
 }
