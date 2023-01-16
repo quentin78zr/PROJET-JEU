@@ -8,7 +8,7 @@ for (let i = 0; i < buttons.length; i++) {
     let resultat = "";
     let round = 10;
     // resultat.innerHTML = joueur + "       " + robot;
-    while round < 10 {
+    while (round < 10) {
       if (joueur===robot) {
         resultat = "Egalité";
       }
