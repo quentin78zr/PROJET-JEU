@@ -32,7 +32,7 @@ for (let i = 0; i < buttons.length; i++) {
   // Vérification de la présence du compteur
   if(nbVisit!=null) {
     // Si oui, on convertit en nombre entier la chaîne de texte qui fut stockée
-    nbVisit = parseInt(nbvisites);
+    nbVisit = parseInt(nbVisit);
   } else {
     nbVisit = 1;
   }
