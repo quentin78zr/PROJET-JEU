@@ -146,8 +146,12 @@ h1{
 	display: none;
 }
 
-.messi img{
-	padding-top:500px;
+.messi-img{
+	padding-top:470px;
+}
+
+.messi-imgg{
+	padding-top:430px;
 }
 
 /* Button fullscreen*/
