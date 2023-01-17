@@ -1,12 +1,22 @@
 @media screen and (min-width:360px) and (max-width:640px) {
     .full-game{
-        background: url(../img/terrain-de-foot-1-portrait.png);
-        background-size:100%;
-        background-repeat: no-repeat;
+
     }
 
     body{
         margin:0;
+        background: url(../img/terrain-de-foot-1-portrait.png);
+        background-size:100%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    #player-score, #computer-score{
+        padding-top:18px;
+    }
+
+    header{
+        display:none;
     }
 
     .score-bar{
@@ -21,10 +31,6 @@
         display:none;
     }
 
-    .six-buttons{
-        flex-direction: column;
-    }
-
     .computer{
         display: none;
     }
@@ -35,11 +41,47 @@
     }
 
     .three-buttons{
-        width:40vw;
+        width:30vw;
         height: 20vh;
     }
 
     .six-buttons{
-        margin-top: 0;
+        margin-top: 20px;
+    }
+
+    .three-buttons button{
+        width: 100%;
+        height: 100%;
+    }
+
+    .footer-bar{
+        font-size: 11px;
+        width:100%;
+    }
+
+    .footer-bar button{
+        height: 75%;
+    }
+
+    .footer-bar button p{
+        font-size: 11px;
+    }
+
+    .test{
+        padding-top : 100px;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 13vh;
+    }
+
+    .test img{
+        width: 20vw;
+        height: 20vw;
+    }
+
+    #test{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
     }
 }

@@ -13,11 +13,6 @@
     <title>Shifumi</title>
 </head>
 <body>
-    
-    <div class="title">
-        <!-- <h1>PFC Foot</h1> -->
-    </div>
-
     <!-- boutton fullscreen -->
     <button class="js-toggle-fullscreen-btn toggle-fullscreen-btn" aria-label="Enter fullscreen mode">
         <svg class="toggle-fullscreen-svg" width="28" height="28" viewBox="-2 -2 28 28">
@@ -36,56 +31,62 @@
             </g>
         </svg>
     </button>
-    <div class="full-game">
-        <header>
-            <img id="logo" alt="logo" src="./assets/img/logoTemporaire.png">
-        </header>
-        <div class="score-bar">
-            <img alt="barre de score" class="img-score-bar" src="./assets/img/bar-de-score-remove-bg2.png">
-            <p id="player-score">0</p>
-            <p id="computer-score">0</p>
-        </div>
-        <div class="game">
-            <div class="player">
-                <img id="logo-psg" alt="logo-psg" src="./assets/img/logo-psg.png">
+    <div id="test">
+        <div class="full-game">
+            <header>
+                <img id="logo" alt="logo" src="./assets/img/logoTemporaire.png">
+            </header>
+            <div class="score-bar">
+                <img alt="barre de score" class="img-score-bar" src="./assets/img/bar-de-score-remove-bg2.png">
+                <p id="player-score">0</p>
+                <p id="computer-score">0</p>
             </div>
-            <!-- <div class="score">
-                <p>0:0</p>
-            </div> -->
-            <div class="computer">
-                <img id="logo-marseille" alt="logo-real" src="./assets/img/logo-marseille.png">
+            <div class="game">
+                <div class="player">
+                    <img id="logo-psg" alt="logo-psg" src="./assets/img/logo-psg.png">
+                </div>
+                <!-- <div class="score">
+                    <p>0:0</p>
+                </div> -->
+                <div class="computer">
+                    <img id="logo-marseille" alt="logo-real" src="./assets/img/logo-marseille.png">
+                </div>
             </div>
-        </div>
-        <div class="ball">
-            <marquee width="81%">
-                <img alt="ballon" src="./assets/img/ballon.png">
-            </marquee>
-        </div>
+            <div class="ball">
+                <marquee width="81%">
+                    <img alt="ballon" src="./assets/img/ballon.png">
+                </marquee>
+            </div>
 
-        <div class="six-buttons">
-            <div class="three-buttons three-buttons-player">
-                <button id="rock"><p>Pierre</p></button>
-                <button id="paper"><p>Feuille</p></button>
-                <button id="scissors"><p>Ciseaux</p></button>
+            <div class="six-buttons">
+                <div class="three-buttons three-buttons-player">
+                    <button id="rock"><p>Pierre</p></button>
+                    <button id="paper"><p>Feuille</p></button>
+                    <button id="scissors"><p>Ciseaux</p></button>
+                </div>
+                <div class="three-buttons three-buttons-ia">
+                    <button id="rock-ia"><p>Pierre</p></button>
+                    <button id="paper-ia"><p>Feuille</p></button>
+                    <button id="scissors-ia"><p>Ciseaux</p></button>
+                </div>
             </div>
-            <div class="three-buttons three-buttons-ia">
-                <button id="rock-ia"><p>Pierre</p></button>
-                <button id="paper-ia"><p>Feuille</p></button>
-                <button id="scissors-ia"><p>Ciseaux</p></button>
+            <div class="test">
+                <img alt="logo Marseille" src="./assets/img/logo-marseille.png">
             </div>
         </div>
-       
-    </div>
+    
     <div class="footer-bar">
         <div>
             <p>Besoin d'aide ?</p>
         </div>
         <div>
-            <button id="save-button">Sauvegarder</button>
+            <button id="save-button"><p>Sauvegarder</p></button>
         </div>
         <div>
             <p>Le jeu</p>
         </div>
     </div>
+    </div>
+
 </body>
 </html>
