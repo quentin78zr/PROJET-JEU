@@ -14,7 +14,7 @@ let iaScore = document.getElementById("computer-score");
 console.log(playerScore);
 console.log(iaScore);
 
-// initialer un nombre aléatoire
+// initialer un onmbre aléatoire
 let min= 1; 
 let max= 4;  
 let robot;
