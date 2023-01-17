@@ -12,7 +12,8 @@
     }
 
     #player-score, #computer-score{
-        padding-top:18px;
+        padding-top:26px;
+        margin-top: 0px;
     }
 
     header{
@@ -21,6 +22,10 @@
 
     .score-bar{
         justify-content: center;
+    }
+
+    #player-score, #computer-score{
+        font-size: 25px;
     }
 
     .img-score-bar{

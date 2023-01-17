@@ -99,17 +99,21 @@ h1{
 #player-score{
 	position:absolute;
 	text-align: center;
-	padding-top: 36px;
-	padding-right: 45px;
+	padding-top: 0px;
+	padding-right: 60px;
 	color: white;
+	font-size: 40px;
+	/* font-family: 'M PLUS 1' */
 }
 
 #computer-score{
 	position:absolute;
 	text-align: center;
-	padding-top: 36px;
+	/* padding-top: 36px; */
 	padding-left: 30px;
 	color: white;
+	font-size: 40px;
+	/* font-family: 'M PLUS 1' */
 
 }
 
