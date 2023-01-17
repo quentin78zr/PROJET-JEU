@@ -13,6 +13,7 @@
     <title>Shifumi</title>
 </head>
 <body>
+
     <!-- boutton fullscreen -->
     <button class="js-toggle-fullscreen-btn toggle-fullscreen-btn" aria-label="Enter fullscreen mode">
         <svg class="toggle-fullscreen-svg" width="28" height="28" viewBox="-2 -2 28 28">
@@ -31,36 +32,44 @@
             </g>
         </svg>
     </button>
+    <!-- section qui entoure le jeu et la barre du bas "sauvegarder" -->
     <div id="test">
         <div class="full-game">
+            <!-- Logo en haut à gauche -->
             <header>
                 <img id="logo" alt="logo" src="./assets/img/logoTemporaire.png">
             </header>
+            <!-- barre de score en haut qui affiche les scores -->
             <div class="score-bar">
                 <img alt="barre de score" class="img-score-bar" src="./assets/img/bar-de-score-remove-bg2.png">
                 <p id="player-score">0</p>
                 <p id="computer-score">0</p>
             </div>
+
             <div class="game">
+                <!-- image qui affiche messi quand le joueur gagne -->
                 <div class="messi">
                     <img src="./assets/img/messi-removebg-preview.png" alt="" class="messi">
                 </div>
+                <!-- logo paris pour le joueur -->
                 <div class="player">
                     <img id="logo-psg" alt="logo-psg" src="./assets/img/logo-psg.png">
                 </div>
-                <!-- <div class="score">
-                    <p>0:0</p>
-                </div> -->
+
+                <!-- logo marseille pour le joueur -->
                 <div class="computer">
                     <img id="logo-marseille" alt="logo-real" src="./assets/img/logo-marseille.png">
                 </div>
             </div>
+
+            <!-- ballon qui défile -->
             <div class="ball">
                 <marquee width="81%">
                     <img alt="ballon" src="./assets/img/ballon.png">
                 </marquee>
             </div>
 
+            <!-- Six boutons pierre feuille ciseaux -->
             <div class="six-buttons">
                 <div class="three-buttons three-buttons-player">
                     <button id="rock"><p>Pierre</p></button>
@@ -78,6 +87,7 @@
             </div>
         </div>
     
+        <!-- barre du bas avec bouton sauvegarder -->
     <div class="footer-bar">
         <div>
             <p>Besoin d'aide ?</p>
@@ -90,6 +100,5 @@
         </div>
     </div>
     </div>
-
 </body>
 </html>
