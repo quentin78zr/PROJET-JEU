@@ -7,10 +7,16 @@ let scissors = document.getElementById("scissors");
 let playerWin = 0;
 let iaWin = 0;
 
+let playerScore = document.getElementById("player-score");
+let iaScore = document.getElementById("computer-score");
+
+console.log(playerScore);
+console.log(iaScore);
+
 // initialer un nombre aléatoire
 let min= 1; 
 let max= 4;  
-let robot
+let robot;
 
 
 //#region Gérer Le Clic De L'utilisateur
@@ -73,10 +79,14 @@ function UserClickRock()
     else if(robot == 2)
     {
         console.log("Ordinateur qui gagné");
+        iaWin+= 1;
+        iaScore.textContent = iaWin;
     }
     else if(robot == 3)
     {
         console.log("Jouer 1 gagné");
+        playerWin+=1;
+        playerScore.textContent = playerWin;
     }
 }
 
@@ -89,6 +99,7 @@ function UserClickPaper()
         console.log("Joueur 1 gagné");
         playerWin+=1;
         console.log(playerWin);
+        playerScore.textContent = playerWin;
     }
     else if(robot == 2)
     {
@@ -99,6 +110,7 @@ function UserClickPaper()
         console.log("Ordinateur gagné");
         iaWin+=1;
         console.log(iaWin);
+        iaScore.textContent = iaWin;
     }
 }
 
@@ -111,11 +123,13 @@ function UserClickScissors()
     {
         console.log("Ordinateur gagné");
         iaWin+=1;
+        iaScore.textContent = iaWin;
     }
     else if(robot == 2)
     {
         console.log("Jouer 1 gagné");
         playerWin+=1;
+        playerScore.textContent = playerWin;
     }
     else if(robot == 3)
     {
