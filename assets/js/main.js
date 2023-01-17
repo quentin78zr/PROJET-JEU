@@ -1,8 +1,8 @@
 
 // récupérer les button de l'utilisateur
-let rock = document.getElementById("rock");
-let paper = document.getElementById("paper");
-let scissors = document.getElementById("scissors");
+let tackle = document.getElementById("tackle");
+let shoot = document.getElementById("shoot");
+let dribble = document.getElementById("dribble");
 
 // point de l'ordinateur et du joueur
 let playerWin = 0;
@@ -22,13 +22,13 @@ let robot;
 
 //#region Gérer Le Clic De L'utilisateur
 
-rock.addEventListener("click" , function(){
-    if(paper.style.backgroundColor == "blue" || scissors.style.backgroundColor == "blue")
+tackle.addEventListener("click" , function(){
+    if(shoot.style.backgroundColor == "blue" || dribble.style.backgroundColor == "blue")
     {
         return;
     }
     else{
-        rock.style.backgroundColor = "blue";
+        tackle.style.backgroundColor = "blue";
     }
     
     UserClickRock();
@@ -36,13 +36,13 @@ rock.addEventListener("click" , function(){
 
 });
 
-paper.addEventListener("click" , function(){
-    if(rock.style.backgroundColor == "blue" || scissors.style.backgroundColor == "blue")
+shoot.addEventListener("click" , function(){
+    if(tackle.style.backgroundColor == "blue" || dribble.style.backgroundColor == "blue")
     {
         return;
     }
     else{
-        paper.style.backgroundColor = "blue";
+        shoot.style.backgroundColor = "blue";
     }
 
     UserClickPaper();
@@ -50,13 +50,13 @@ paper.addEventListener("click" , function(){
 
 });
 
-scissors.addEventListener("click" , function(){
-    if(paper.style.backgroundColor == "blue" || rock.style.backgroundColor == "blue")
+dribble.addEventListener("click" , function(){
+    if(shoot.style.backgroundColor == "blue" || tackle.style.backgroundColor == "blue")
     {
         return;
     }
     else{
-        scissors.style.backgroundColor = "blue";
+        dribble.style.backgroundColor = "blue";
     }
 
     UserClickScissors();
