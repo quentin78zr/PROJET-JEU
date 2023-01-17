@@ -1,9 +1,10 @@
 body{
     background-image:url("../img/terrain-de-foot-1.png");
-    background-size:100%;
     background-repeat: no-repeat;
-
+	background-size: 100%;
+	margin:0;
 }
+
 h1{
     text-align: center;
     font-family: 'Sportsball', sans-serif;
@@ -24,9 +25,6 @@ h1{
     /* background: url("../img/il_1588xN.3726379315_kvwo.png"); */
 }
 
-button{
-    /* border-radius: 100%; */
-}
 
 #logo{
     width:50px;
@@ -98,9 +96,48 @@ button{
 	justify-content: center;
 }
 
-#score-player{
+#player-score{
 	position:absolute;
+	text-align: center;
+	padding-top: 36px;
+	padding-right: 45px;
+	color: white;
 }
+
+#computer-score{
+	position:absolute;
+	text-align: center;
+	padding-top: 36px;
+	padding-left: 30px;
+	color: white;
+
+}
+
+.footer-bar{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: black;
+	margin:0;
+	color:white;
+	font-family: 'M PLUS 1';font-size: 22px;
+}
+
+#save-button{
+	background-color: #0071D9;
+	color:white;
+	font-family: 'M PLUS 1';font-size: 22px;
+	border-radius: 10px;
+	margin-right: 7vw;
+}
+
+
+
+
+
+
+
+
 
 /* Button fullscreen*/
 

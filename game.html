@@ -8,12 +8,12 @@
     <link href="https://fonts.cdnfonts.com/css/sportsball" rel="stylesheet">
     <script async src="./assets/js/fullscreen.js"></script>
     <script defer src="./assets/js/main.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=M PLUS 1' rel='stylesheet'>
+    <link rel="stylesheet" href="./assets/css/mediaqueries.css">
     <title>Shifumi</title>
 </head>
 <body>
-    <header>
-        <img id="logo" alt="logo" src="./assets/img/logoTemporaire.png">
-    </header>
+    
     <div class="title">
         <!-- <h1>PFC Foot</h1> -->
     </div>
@@ -37,8 +37,11 @@
         </svg>
     </button>
     <div class="full-game">
+        <header>
+            <img id="logo" alt="logo" src="./assets/img/logoTemporaire.png">
+        </header>
         <div class="score-bar">
-            <img alt="barre de score" src="./assets/img/bar-de-score-remove-bg2.png">
+            <img alt="barre de score" class="img-score-bar" src="./assets/img/bar-de-score-remove-bg2.png">
             <p id="player-score">0</p>
             <p id="computer-score">0</p>
         </div>
@@ -61,15 +64,27 @@
 
         <div class="six-buttons">
             <div class="three-buttons three-buttons-player">
-                <button id="rock">Pierre</button>
-                <button id="paper">Feuille</button>
-                <button id="scissors">Ciseaux</button>
+                <button id="rock"><p>Pierre</p></button>
+                <button id="paper"><p>Feuille</p></button>
+                <button id="scissors"><p>Ciseaux</p></button>
             </div>
             <div class="three-buttons three-buttons-ia">
-                <button id="rock-ia">Pierre</button>
-                <button id="paper-ia">Feuille</button>
-                <button id="scissors-ia">Ciseaux</button>
+                <button id="rock-ia"><p>Pierre</p></button>
+                <button id="paper-ia"><p>Feuille</p></button>
+                <button id="scissors-ia"><p>Ciseaux</p></button>
             </div>
+        </div>
+       
+    </div>
+    <div class="footer-bar">
+        <div>
+            <p>Besoin d'aide ?</p>
+        </div>
+        <div>
+            <button id="save-button">Sauvegarder</button>
+        </div>
+        <div>
+            <p>Le jeu</p>
         </div>
     </div>
 </body>
