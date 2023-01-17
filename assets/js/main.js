@@ -1,3 +1,4 @@
+
 // récupérer les button de l'utilisateur
 let rock = document.getElementById("rock");
 let paper = document.getElementById("paper");
@@ -144,6 +145,8 @@ function CheckTheWinner()
     if(playerWin == 10)
     {
         console.log("le joueur 1 vient de gagné la partie");
+        let jsConfetti = new JSConfetti()
+        jsConfetti.addConfetti();
     }
     else if(iaWin == 10)
     {
