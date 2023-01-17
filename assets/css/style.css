@@ -148,10 +148,12 @@ h1{
 
 .messi-img{
 	padding-top:470px;
+	display:none;
 }
 
 .messi-imgg{
 	padding-top:430px;
+	display:none;
 }
 
 /* Button fullscreen*/
