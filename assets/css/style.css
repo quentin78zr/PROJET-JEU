@@ -147,12 +147,14 @@ h1{
 }
 
 .messi-img{
-	padding-top:470px;
+	position: absolute;
+	top: 30px;
 	display:none;
 }
 
 .omwin-img{
-	padding-top:430px;
+	position: absolute;
+	top: 1px;
 	display:none;
 }
 
@@ -237,6 +239,7 @@ h1{
 	top: 150px;
 	font-size: 35px;
 	position: relative;
+	z-index: 1;
 }
 
 .reload-button {

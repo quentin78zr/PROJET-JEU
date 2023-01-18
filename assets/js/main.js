@@ -7,6 +7,9 @@ let dribble = document.getElementById("dribble");
 let displayEndGame = document.querySelector("#endGame"); 
 let textEndGame = document.querySelector("#endGame p");
 
+let playerImgWin = document.querySelector(".messi-img")
+let iaImgWin = document.querySelector(".omwin-img")
+
 console.log(displayEndGame);
 
 // point de l'ordinateur et du joueur
@@ -133,6 +136,8 @@ function CheckTheWinner()
         jsConfetti.addConfetti();
         displayEndGame.style.display = "flex";
         textEndGame.textContent = "PSG est champion de France bravo !!!!!";
+        playerImgWin.style.display = "flex";
+
     }
     else if(iaWin == 10)
     {
@@ -141,6 +146,8 @@ function CheckTheWinner()
         jsConfetti.addConfetti();
         displayEndGame.style.display = "flex";
         textEndGame.textContent = "Marseille est champion de France bravo !!!!!";
+        iaImgWin.style.display = "flex";
+
     }
 }
 
