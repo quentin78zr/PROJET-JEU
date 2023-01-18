@@ -1,59 +1,147 @@
-/* Déclaration de variables : 
-- nb de victoires IA,
-- nb de victoires du joueur,
-- pierre,
-- feuille,
-- ciseaux, */
 
-let rock = document.querySelector("#rock");
-let paper = document.querySelector("#paper");
-let scissors = document.querySelector("#scissors");
-let buttons = document.querySelectorAll("button");
+// récupérer les button de l'utilisateur
+let tackle = document.getElementById("tackle");
+let shoot = document.getElementById("shoot");
+let dribble = document.getElementById("dribble");
 
-// Parcourir les lettres des boutons
-for (let i = 0; i < buttons.length; i++){ 
-// Si le bouton HTML est cliqué alors lancer la partie
-buttons[i].addEventListener('click',function() {
-    const joueur = buttons[i].innerHTML;
-    console.log(joueur);
-    const robot = buttons[Math.floor(Math.random() * buttons.length)].innerHTML;
-    console.log(robot);
+let playerImgWin = document.querySelector(".messi-img") 
 
-    let round = 0
-    let winIA = 0;
-    let defaitePlayer = 0;
-    let winPlayer = 0;
-    // Tant que le nb de manches <= 10 
-    while (round <= 10) {
-        // Si l'IA a choisi papier et le joueur ciseau ou si l'IA a choisi ciseaux et le joueur pierre ou si l'IA a choisi pierre et le joueur feuille alors gagné 
-        if((robot === "Feuille" && joueur === "Ciseaux") || (robot === "Ciseaux" && joueur === "Pierre") || (robot === "Pierre" && joueur === "Feuille")) {
-        console.log("Manche gagnée !");
-        winPlayer += 1;
-        console.log(`Vous avez pour l'instant ${winPlayer} victoire(s)`);
-        }
+console.log(playerImgWin);
 
-        // Cas d'égalité
-        else if(robot === joueur) {
-            console.log("Egalité");
-        }
+// point de l'ordinateur et du joueur
+let playerWin = 0;
+let iaWin = 0;
 
-        // Sinon perdu
-        else {
-            console.log("Manche perdue");
-            winIA += 1;
-            defaitePlayer += 1;
-            console.log(`L'ordinateur a pour l'instant ${winIA} victoire(s)`);
-        }
+let playerScore = document.getElementById("player-score");
+let iaScore = document.getElementById("computer-score");
 
-        // Compteur de victoires et défaites
-        console.log(`Vous avez actuellement ${winPlayer} victoire(s) et ${defaitePlayer} défaite(s)`);
-        round++
-}
-    // Si le nb de victoires d'IA ou du joueur est > 10 alors rejouer ou pas
-    if (winIA > 10 || winPlayer > 10) {
-        let replay = window.prompt("Voulez-vous rejouer ? Oui ou non");
-    }
-    return;
-    // Afficher le %age de victoires contre l'ordinateur
+console.log(playerScore);
+console.log(iaScore);
+
+// initialer un onmbre aléatoire
+let min= 1; 
+let max= 4;  
+let robot;
+
+//#region Gérer Le Clic De L'utilisateur
+
+tackle.addEventListener("click" , function(){
+    UserClickRock();
+    CheckTheWinner();
+
 });
+
+shoot.addEventListener("click" , function(){
+
+    UserClickPaper();
+    CheckTheWinner();
+
+});
+
+dribble.addEventListener("click" , function(){
+    UserClickScissors();
+    CheckTheWinner();
+   
+});
+
+//#endregion
+
+
+//#region Fonction Pour Vérifier Si L'utilisateur gagne perd ou égalité
+
+function UserClickRock()
+{
+    robot = Math.floor(Math.random() * (max - min) + min);
+
+    if(robot == 1)
+    {
+        console.log("égalité");
+    }
+    else if(robot == 2)
+    {
+        console.log("Ordinateur qui gagné");
+        iaWin+= 1;
+        iaScore.textContent = iaWin;
+    }
+    else if(robot == 3)
+    {
+        console.log("Jouer 1 gagné");
+        playerWin+=1;
+        playerScore.textContent = playerWin;
+
+    }
 }
+
+function UserClickPaper()
+{
+    robot = Math.floor(Math.random() * (max - min) + min);
+
+    if(robot == 1)
+    {
+        console.log("Joueur 1 gagné");
+        playerWin+=1;
+        console.log(playerWin);
+        playerScore.textContent = playerWin;
+    }
+    else if(robot == 2)
+    {
+        console.log("égalité");
+    }
+    else if(robot == 3)
+    {
+        console.log("Ordinateur gagné");
+        iaWin+=1;
+        console.log(iaWin);
+        iaScore.textContent = iaWin;
+    }
+}
+
+function UserClickScissors()
+{
+
+    robot = Math.floor(Math.random() * (max - min) + min);
+
+    if(robot == 1)
+    {
+        console.log("Ordinateur gagné");
+        iaWin+=1;
+        iaScore.textContent = iaWin;
+        
+    }
+    else if(robot == 2)
+    {
+        console.log("Jouer 1 gagné");
+        playerWin+=1;
+        playerScore.textContent = playerWin;
+    }
+    else if(robot == 3)
+    {
+        console.log("Egalité");
+    }
+}
+
+//#endregion
+
+function CheckTheWinner()
+{   
+
+    if(playerWin == 10)
+    {
+        console.log("le joueur 1 vient de gagné la partie");
+        let jsConfetti = new JSConfetti()
+        jsConfetti.addConfetti();
+    }
+    else if(iaWin == 10)
+    {
+        console.log("l'ordinateur vient de gagné la partie");
+        let jsConfetti = new JSConfetti()
+        jsConfetti.addConfetti();
+    }
+}
+
+
+// window.addEventListener("load", event => {
+//     document.getElementById("reload").onclick = function() {
+//         location.reload(true);
+//     }
+// });
