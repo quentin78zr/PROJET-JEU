@@ -1,0 +1,93 @@
+html
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#end .elem {
+  text-align: center;
+  position: relative;
+  top: 200px;
+
+}
+.texte  {
+  color: white;
+}
+.texte h1{
+  margin-bottom: 10px;
+  font-size: 70px;
+  font-weight: bolder;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+}
+.texte h3{
+  margin-top: 30px;
+  font-size: 40px;
+  font-weight:200;
+  text-transform: uppercase;
+
+}
+.texte p{
+  margin-top: 20px;
+  font-size: 40px;
+  font-weight: 500;
+  text-transform: capitalize;
+
+}
+.button button{
+  margin-top: 20px;
+  color: white;
+  text-transform: uppercase;
+  padding: 15px 30px;
+  font-size: 20px;
+  margin-left: 25px;
+  margin-right: 25px;
+  border-color: transparent;
+  background-color: rgb(18, 18, 115);
+  border-radius: 5px;
+}
+
+#end {
+  width: 100%;
+  height: 100vh;
+    background: linear-gradient(45deg,rgb(88, 0, 189),rgb(187, 207, 255),rgb(255, 49, 176),rgb(214, 160, 255),rgb(159, 36, 254));
+     background: linear-gradient(90deg,rgb(88, 0, 189),rgb(187, 207, 255),rgb(255, 49, 176),rgb(214, 160, 255),rgb(159, 36, 254)); 
+
+    background-size: 300% 300%;
+    animation: color 10s ease-in-out infinite;
+}
+@keyframes color {
+  0%{
+    background-position: 0% 50%;
+  }
+  25%{
+    background-position: 100% 50%;
+  }
+  50%{
+    background-position: 0% 50%;
+  } 100%{
+    background-position: 100% 50%;
+  }
+}
+@media (max-width: 768px){
+  .button button{
+  font-size: 15px;
+  margin-top: 20px;
+
+  }
+  .texte h1{
+  font-size: 40px;
+
+  }
+  .texte p{
+  font-size: 30px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+
+  }
+  .texte h3{
+  font-size: 25px;
+  margin-top: 30px;
+  }
+}
