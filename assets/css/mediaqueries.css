@@ -16,6 +16,10 @@
         margin-top: 0px;
     }
 
+    .three-buttons-ia{
+        display:none;
+    }
+
     header{
         display:none;
     }
@@ -77,6 +81,8 @@
         display: flex;
         justify-content: center;
         padding-bottom: 13vh;
+        text-align: center;
+        margin:0;
     }
 
     .test img{
@@ -98,6 +104,19 @@
         align-items: center;
     }
 
+    .player{
+        display:flex;
+        justify-content: center;
+    }
+
+    /* .computer{
+        
+    } */
+
+    .player p {
+        display:flex;
+        align-items:center;
+    }
     .omwin-img{
         padding-bottom:5px;
         margin-top: -50px;
