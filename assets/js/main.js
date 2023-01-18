@@ -4,6 +4,10 @@ let tackle = document.getElementById("tackle");
 let shoot = document.getElementById("shoot");
 let dribble = document.getElementById("dribble");
 
+let playerImgWin = document.querySelector(".messi-img") 
+
+console.log(playerImgWin);
+
 // point de l'ordinateur et du joueur
 let playerWin = 0;
 let iaWin = 0;
@@ -18,6 +22,7 @@ console.log(iaScore);
 let min= 1; 
 let max= 4;  
 let robot;
+
 
 
 //#region Gérer Le Clic De L'utilisateur
@@ -88,6 +93,7 @@ function UserClickRock()
         console.log("Jouer 1 gagné");
         playerWin+=1;
         playerScore.textContent = playerWin;
+
     }
 }
 
@@ -151,5 +157,7 @@ function CheckTheWinner()
     else if(iaWin == 10)
     {
         console.log("l'ordinateur vient de gagné la partie");
+        let jsConfetti = new JSConfetti()
+        jsConfetti.addConfetti();
     }
 }
