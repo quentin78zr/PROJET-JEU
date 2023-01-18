@@ -45,6 +45,11 @@ h1{
     height:150px;
 }
 
+.player p, .computer p {
+	font-weight: bold;
+	font-size: 22px;
+}
+
 
 #logo-psg, #logo-marseille{
     width:100%;
