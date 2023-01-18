@@ -7,14 +7,22 @@ let dribble = document.getElementById("dribble");
 let displayEndGame = document.querySelector("#endGame"); 
 let textEndGame = document.querySelector("#endGame p");
 
-let playerImgWin = document.querySelector(".messi-img")
-let iaImgWin = document.querySelector(".omwin-img")
+let playerImgWin = document.querySelector(".messi-img");
+let iaImgWin = document.querySelector(".omwin-img");
+
+let saveButton = document.getElementById("save-button")
 
 console.log(displayEndGame);
 
 // point de l'ordinateur et du joueur
 let playerWin = 0;
 let iaWin = 0;
+
+let roundPlayer = 0;
+let roundIa = 0;
+
+let textRoundPlayer = document.querySelector(".player p span");
+let textRoundIa = document.querySelector(".computer p span");
 
 let playerScore = document.getElementById("player-score");
 let iaScore = document.getElementById("computer-score");
@@ -59,17 +67,17 @@ function UserClickRock()
 
     if(robot == 1)
     {
-        console.log("égalité");
+        console.log("Egalité");
     }
     else if(robot == 2)
     {
-        console.log("Ordinateur qui gagné");
+        console.log("Ordinateur a gagné");
         iaWin+= 1;
         iaScore.textContent = iaWin;
     }
     else if(robot == 3)
     {
-        console.log("Jouer 1 gagné");
+        console.log("Bravo, vous avez gagné");
         playerWin+=1;
         playerScore.textContent = playerWin;
 
@@ -82,18 +90,18 @@ function UserClickPaper()
 
     if(robot == 1)
     {
-        console.log("Joueur 1 gagné");
+        console.log("Bravo, vous avez gagné");
         playerWin+=1;
         console.log(playerWin);
         playerScore.textContent = playerWin;
     }
     else if(robot == 2)
     {
-        console.log("égalité");
+        console.log("Egalité");
     }
     else if(robot == 3)
     {
-        console.log("Ordinateur gagné");
+        console.log("Ordinateur a gagné");
         iaWin+=1;
         console.log(iaWin);
         iaScore.textContent = iaWin;
@@ -107,14 +115,14 @@ function UserClickScissors()
 
     if(robot == 1)
     {
-        console.log("Ordinateur gagné");
+        console.log("Ordinateur a gagné");
         iaWin+=1;
         iaScore.textContent = iaWin;
         
     }
     else if(robot == 2)
     {
-        console.log("Jouer 1 gagné");
+        console.log("Bravo, vous avez gagné");
         playerWin+=1;
         playerScore.textContent = playerWin;
     }
@@ -129,32 +137,63 @@ function UserClickScissors()
 function CheckTheWinner()
 {   
 
-    if(playerWin == 10)
+    if(playerWin == 5)
     {
-        console.log("le joueur 1 vient de gagné la partie");
+        roundPlayer += 1;
+        playerWin = 0;
+        textRoundPlayer.textContent = roundPlayer;
+        playerScore.textContent = "0";
+
+        iaWin = 0;
+        textRoundIa.textContent = roundIa;
+        iaScore.textContent = "0";
+
+    }
+    else if(iaWin == 5)
+    {
+        roundIa += 1;
+        iaWin = 0;
+        textRoundIa.textContent = roundIa;
+        iaScore.textContent = "0";
+
+        playerWin = 0;
+        textRoundPlayer.textContent = roundPlayer;
+        playerScore.textContent = "0";
+
+    }
+
+    if(textRoundPlayer.textContent == "10")
+    {
         let jsConfetti = new JSConfetti();
         jsConfetti.addConfetti();
         displayEndGame.style.display = "flex";
         textEndGame.textContent = "PSG est champion de France bravo !!!!!";
         playerImgWin.style.display = "flex";
-
     }
-    else if(iaWin == 10)
+    else if(textRoundIa.textContent == "10")
     {
-        console.log("l'ordinateur vient de gagné la partie");
         let jsConfetti = new JSConfetti();
         jsConfetti.addConfetti();
         displayEndGame.style.display = "flex";
         textEndGame.textContent = "Marseille est champion de France bravo !!!!!";
         iaImgWin.style.display = "flex";
-
     }
 }
 
-
+// function qui permet de reload le jeux
 window.addEventListener("load", event => {
     document.querySelector(".reload-button").onclick = function() {
         location.reload(true);
     }
 });
+
+// ------------------------ SAUVEGARDE --------------------- //
+
+saveButton.addEventListener('click',function() {
+    // Pour envoyer les item
+    localStorage.setItem('Score',roundPlayer)
+
+    // Pour récupérer les item
+    roundPlayer.textContent = localStorage.getItem('Score')
+})
 

@@ -97,4 +97,12 @@
     #endGame{
         align-items: center;
     }
+
+    .omwin-img{
+        padding-bottom:5px;
+        margin-top: -50px;
+    }    
+    .messi-img{
+        margin-top: -80px;
+    }
 }
