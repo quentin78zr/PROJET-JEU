@@ -156,6 +156,12 @@ h1{
 	display:none;
 }
 
+#save-button{
+	display:flex;
+	align-items: center;
+	height:50px;
+}
+
 /* Button fullscreen*/
 
 .toggle-fullscreen-btn {
