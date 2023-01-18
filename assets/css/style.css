@@ -229,6 +229,7 @@ h1{
 	position: absolute;
 	background-color: white;
 	display: none;
+	justify-content: center;
 }
 
 .endGame-content {

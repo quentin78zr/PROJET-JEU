@@ -4,9 +4,10 @@ let tackle = document.getElementById("tackle");
 let shoot = document.getElementById("shoot");
 let dribble = document.getElementById("dribble");
 
-let playerImgWin = document.querySelector(".messi-img") 
+let displayEndGame = document.querySelector("#endGame"); 
+let textEndGame = document.querySelector("#endGame p");
 
-console.log(playerImgWin);
+console.log(displayEndGame);
 
 // point de l'ordinateur et du joueur
 let playerWin = 0;
@@ -128,20 +129,25 @@ function CheckTheWinner()
     if(playerWin == 10)
     {
         console.log("le joueur 1 vient de gagné la partie");
-        let jsConfetti = new JSConfetti()
+        let jsConfetti = new JSConfetti();
         jsConfetti.addConfetti();
+        displayEndGame.style.display = "flex";
+        textEndGame.textContent = "PSG est champion de France bravo !!!!!";
     }
     else if(iaWin == 10)
     {
         console.log("l'ordinateur vient de gagné la partie");
-        let jsConfetti = new JSConfetti()
+        let jsConfetti = new JSConfetti();
         jsConfetti.addConfetti();
+        displayEndGame.style.display = "flex";
+        textEndGame.textContent = "Marseille est champion de France bravo !!!!!";
     }
 }
 
 
-// window.addEventListener("load", event => {
-//     document.getElementById("reload").onclick = function() {
-//         location.reload(true);
-//     }
-// });
+window.addEventListener("load", event => {
+    document.querySelector(".reload-button").onclick = function() {
+        location.reload(true);
+    }
+});
+

@@ -89,4 +89,12 @@
         align-items: center;
         flex-direction: column;
     }
+
+    #save-button{
+        height: 30px;
+    }
+
+    #endGame{
+        align-items: center;
+    }
 }
