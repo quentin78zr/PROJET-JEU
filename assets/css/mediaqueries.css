@@ -1,0 +1,45 @@
+@media screen and (min-width:360px) and (max-width:640px) {
+    .full-game{
+        background: url(../img/terrain-de-foot-1-portrait.png);
+        background-size:100%;
+        background-repeat: no-repeat;
+    }
+
+    body{
+        margin:0;
+    }
+
+    .score-bar{
+        justify-content: center;
+    }
+
+    .img-score-bar{
+        width:90vw;
+    }
+
+    .ball{
+        display:none;
+    }
+
+    .six-buttons{
+        flex-direction: column;
+    }
+
+    .computer{
+        display: none;
+    }
+
+    .player{
+        width:20vw;
+        height: 20vw;
+    }
+
+    .three-buttons{
+        width:40vw;
+        height: 20vh;
+    }
+
+    .six-buttons{
+        margin-top: 0;
+    }
+}

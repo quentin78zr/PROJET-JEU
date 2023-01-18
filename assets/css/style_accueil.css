@@ -3,7 +3,9 @@ html
     margin: 0;
     padding: 0;
 }
-
+source{
+display: none;
+}
 #home .filter{
 width: 100%;
 background: url(../images/MacBook\ Air\ -\ 2.png) ;
@@ -58,7 +60,7 @@ height: 100vh;
 }
 
 
-@media (min-width: 970px) {
+@media (min-width: 1314px) {
     #home .element{
         display: flex;
         flex-direction: column;
@@ -105,7 +107,7 @@ height: 100vh;
       @keyframes bounce {
         0%{
           top : 0;
-          left : 100px;
+          left : 0;
         }
         20%{
           left: 250px;
@@ -127,7 +129,7 @@ height: 100vh;
       
         }
         100%{
-          left: 1200px;
+          left: 1000px;
           top : 400px;
       
         }

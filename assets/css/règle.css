@@ -1,0 +1,125 @@
+html
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    /* max-height: 100vh; */
+    background-color: rgb(9, 6, 67);
+    margin: 0;
+    padding: 0;
+}
+.texte{
+    padding: 20px;
+    width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: relative;
+    top: 150px;
+    text-align: center;
+    z-index: 2;
+    color: white;
+    background-color: rgba(95, 90, 90, 0.279);
+    border-radius: 15px;
+
+}
+.texte h1{
+    font-weight: bold;
+    font-size: 40px;
+    text-transform: uppercase;
+    
+}
+.texte h3{
+    font-weight:600;
+    font-size: 30px;
+    margin-top: 20px;
+}
+.texte p{
+    font-weight:bolder;
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+.texte button{
+color: white;
+padding: 13px 10px;
+font-size: 20px;
+background-color: #e10552;
+border-color: transparent;
+font-weight: 400;
+border-radius: 5px;
+
+}
+
+
+
+.regle{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow:hidden;
+    z-index: 1;
+}
+.bubbles{
+    display: flex;
+    position: relative;
+}
+.bubbles span{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #70e5ff;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fc3dc44, 0 0 50px #70e5ff, 0 0 10px #70e5ff;
+    animation: animate 15s linear infinite ;
+    animation-duration: calc(115s / var(--i));
+
+}
+
+.bubbles span:nth-child(even){
+    background: #e10552;
+    box-shadow: 0 0 0 10px #ff0059, 0 0 50px #ff5c95, 0 0 10px #ff5b94;
+
+}
+@keyframes animate {
+    0%{
+        transform: translateY(100vh) scale(0);
+    }
+    100%{
+        transform: translateY(-50vh) scale(1);
+    }
+}
+
+@media (max-width: 768px) {
+    .texte button{
+        color: white;
+        padding: 8px 8px;
+        font-size: 10px;
+        background-color: #e10552;
+        border-color: transparent;
+        font-weight: 400;
+        border-radius: 5px;
+        
+        }
+        .texte h1{
+            font-weight: bold;
+            font-size: 20px;
+            text-transform: uppercase;
+            
+        }
+        .texte p, .texte h3{
+            font-weight:bolder;
+            font-size: 15px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        
+        }
+        .texte{
+            display: flex;
+            flex-direction: column;
+        }
+}
