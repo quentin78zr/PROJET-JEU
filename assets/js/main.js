@@ -23,32 +23,15 @@ let min= 1;
 let max= 4;  
 let robot;
 
-
-
 //#region Gérer Le Clic De L'utilisateur
 
 tackle.addEventListener("click" , function(){
-    if(shoot.style.backgroundColor == "blue" || dribble.style.backgroundColor == "blue")
-    {
-        return;
-    }
-    else{
-        tackle.style.backgroundColor = "blue";
-    }
-    
     UserClickRock();
     CheckTheWinner();
 
 });
 
 shoot.addEventListener("click" , function(){
-    if(tackle.style.backgroundColor == "blue" || dribble.style.backgroundColor == "blue")
-    {
-        return;
-    }
-    else{
-        shoot.style.backgroundColor = "blue";
-    }
 
     UserClickPaper();
     CheckTheWinner();
@@ -56,14 +39,6 @@ shoot.addEventListener("click" , function(){
 });
 
 dribble.addEventListener("click" , function(){
-    if(shoot.style.backgroundColor == "blue" || tackle.style.backgroundColor == "blue")
-    {
-        return;
-    }
-    else{
-        dribble.style.backgroundColor = "blue";
-    }
-
     UserClickScissors();
     CheckTheWinner();
    
@@ -131,6 +106,7 @@ function UserClickScissors()
         console.log("Ordinateur gagné");
         iaWin+=1;
         iaScore.textContent = iaWin;
+        
     }
     else if(robot == 2)
     {
@@ -147,7 +123,8 @@ function UserClickScissors()
 //#endregion
 
 function CheckTheWinner()
-{
+{   
+
     if(playerWin == 10)
     {
         console.log("le joueur 1 vient de gagné la partie");
@@ -161,3 +138,10 @@ function CheckTheWinner()
         jsConfetti.addConfetti();
     }
 }
+
+
+// window.addEventListener("load", event => {
+//     document.getElementById("reload").onclick = function() {
+//         location.reload(true);
+//     }
+// });
