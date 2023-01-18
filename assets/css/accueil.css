@@ -6,7 +6,7 @@ html
 
 #home .filter{
   width: 100%;
-  background-image: url("../img/Arrière-plan-stade.png") ;
+  background-image: url("../img/stade.png") ;
   background-attachment: fixed;
   background-size: cover;
   height: 100vh;
