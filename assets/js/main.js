@@ -65,17 +65,17 @@ function UserClickRock()
 
     if(robot == 1)
     {
-        console.log("égalité");
+        console.log("Egalité");
     }
     else if(robot == 2)
     {
-        console.log("Ordinateur qui gagné");
+        console.log("Ordinateur a gagné");
         iaWin+= 1;
         iaScore.textContent = iaWin;
     }
     else if(robot == 3)
     {
-        console.log("Jouer 1 gagné");
+        console.log("Bravo, vous avez gagné");
         playerWin+=1;
         playerScore.textContent = playerWin;
 
@@ -88,18 +88,18 @@ function UserClickPaper()
 
     if(robot == 1)
     {
-        console.log("Joueur 1 gagné");
+        console.log("Bravo, vous avez gagné");
         playerWin+=1;
         console.log(playerWin);
         playerScore.textContent = playerWin;
     }
     else if(robot == 2)
     {
-        console.log("égalité");
+        console.log("Egalité");
     }
     else if(robot == 3)
     {
-        console.log("Ordinateur gagné");
+        console.log("Ordinateur a gagné");
         iaWin+=1;
         console.log(iaWin);
         iaScore.textContent = iaWin;
@@ -113,14 +113,14 @@ function UserClickScissors()
 
     if(robot == 1)
     {
-        console.log("Ordinateur gagné");
+        console.log("Ordinateur a gagné");
         iaWin+=1;
         iaScore.textContent = iaWin;
         
     }
     else if(robot == 2)
     {
-        console.log("Jouer 1 gagné");
+        console.log("Bravo, vous avez gagné");
         playerWin+=1;
         playerScore.textContent = playerWin;
     }
