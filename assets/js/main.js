@@ -132,7 +132,7 @@ function CheckTheWinner()
         let jsConfetti = new JSConfetti();
         jsConfetti.addConfetti();
         displayEndGame.style.display = "flex";
-        textEndGame.textContent = "PSG est champion du monde bravo !!!!!";
+        textEndGame.textContent = "PSG est champion de France bravo !!!!!";
     }
     else if(iaWin == 10)
     {
@@ -140,7 +140,7 @@ function CheckTheWinner()
         let jsConfetti = new JSConfetti();
         jsConfetti.addConfetti();
         displayEndGame.style.display = "flex";
-        textEndGame.textContent = "Marseille est champion du monde bravo !!!!!";
+        textEndGame.textContent = "Marseille est champion de France bravo !!!!!";
     }
 }
 
