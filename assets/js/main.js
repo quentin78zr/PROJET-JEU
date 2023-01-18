@@ -10,6 +10,8 @@ let textEndGame = document.querySelector("#endGame p");
 let playerImgWin = document.querySelector(".messi-img");
 let iaImgWin = document.querySelector(".omwin-img");
 
+let saveButton = document.getElementById("save-button")
+
 console.log(displayEndGame);
 
 // point de l'ordinateur et du joueur
@@ -184,4 +186,14 @@ window.addEventListener("load", event => {
         location.reload(true);
     }
 });
+
+// ------------------------ SAUVEGARDE --------------------- //
+
+saveButton.addEventListener('click',function() {
+    // Pour envoyer les item
+    localStorage.setItem('Score',roundPlayer)
+
+    // Pour récupérer les item
+    roundPlayer.textContent = localStorage.getItem('Score')
+})
 
