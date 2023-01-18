@@ -137,7 +137,7 @@ function UserClickScissors()
 function CheckTheWinner()
 {   
 
-    if(playerWin == 5)
+    if(playerWin == 6)
     {
         roundPlayer += 1;
         playerWin = 0;
@@ -149,7 +149,7 @@ function CheckTheWinner()
         iaScore.textContent = "0";
 
     }
-    else if(iaWin == 5)
+    else if(iaWin == 6)
     {
         roundIa += 1;
         iaWin = 0;
@@ -191,9 +191,11 @@ window.addEventListener("load", event => {
 
 saveButton.addEventListener('click',function() {
     // Pour envoyer les item
-    localStorage.setItem('Score',roundPlayer)
+    localStorage.setItem('ScorePlayer',roundPlayer);
+    localStorage.setItem("ScoreIa" , roundIa)
 
     // Pour récupérer les item
-    roundPlayer.textContent = localStorage.getItem('Score')
-})
+    roundPlayer = localStorage.getItem('ScorePlayer');
+    roundIa = localStorage.getItem('ScoreIa');
+})  
 
